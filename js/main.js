@@ -1,14 +1,12 @@
-/**
- * Created by vicky on 2016/11/1.
+/*
+ *
+ *  menu open and close
+ *
  */
-
-var btn= document.getElementsByClassName("button1");
-var det= document.getElementsByClassName("details1");
-
-btn.onclick= function () {
-    if(det.style.display== "none") {
-        det.style.display= "block";
-    }else{
-        det.style.display= "none";
-    }
-}
+var drawer = document.getElementById("drawer");
+var menu = document.getElementById("menu");
+menu.addEventListener('click', function(e) {
+    drawer.classList.toggle('open');
+    menu.classList.toggle('close');
+    e.stopPropagation();
+});

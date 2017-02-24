@@ -1,0 +1,1108 @@
+/*
+*
+*  icon pictures in weloveiconfonts.com
+*
+*/
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+}
+
+/*
+*
+*  CSS reset
+*
+*/
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html, 
+body, 
+ul, 
+input, 
+textarea {
+    margin: 0;
+    padding: 0;
+}
+
+input, 
+button, 
+select, 
+textarea {
+    outline:none
+}
+
+body {
+    font-size: 16px;
+    font-family: Helvetica, Tahoma, Arial;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    text-shadow: none;
+}
+
+a:visited,
+a:hover {
+    text-decoration: none;
+    color: #bac7dc;
+}
+
+a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/*
+*
+*  flex layout
+*
+*/
+body,
+footer,
+.flex-container,
+.carousel-caption {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/*screen < 360px(smaller than phone)*/
+.col-sm-12 {
+    width: 100%;
+}
+
+.col-sm-11 {
+    width: 91.66666667%;
+}
+
+.col-sm-10 {
+    width: 83.33333333%;
+}
+
+.col-sm-9 {
+    width: 75%;
+}
+
+.col-sm-8 {
+    width: 66.66666667%;
+}
+.col-sm-7 {
+    width: 58.33333333%;
+}
+.col-sm-6 {
+    width: 50%;
+}
+.col-sm-5 {
+    width: 41.66666667%;
+}
+.col-sm-4 {
+    width: 33.33333333%;
+}
+.col-sm-3 {
+    width: 25%;
+}
+.col-sm-2 {
+    width: 16.66666667%;
+}
+.col-sm-1 {
+    width: 8.33333333%;
+}
+
+/*360px < screen < 768px(small pad, phone)*/
+@media screen and (min-width: 360px) {
+    .col-md-12 {
+        width: 100%;
+    }
+
+    .col-md-11 {
+        width: 91.66666667%;
+    }
+
+    .col-md-10 {
+        width: 83.33333333%;
+    }
+
+    .col-md-9 {
+        width: 75%;
+    }
+
+    .col-md-8 {
+        width: 66.66666667%;
+    }
+    .col-md-7 {
+        width: 58.33333333%;
+    }
+    .col-md-6 {
+        width: 50%;
+    }
+    .col-md-5 {
+        width: 41.66666667%;
+    }
+    .col-md-4 {
+        width: 33.33333333%;
+    }
+    .col-md-3 {
+        width: 25%;
+    }
+    .col-md-2 {
+        width: 16.66666667%;
+    }
+    .col-md-1 {
+        width: 8.33333333%;
+    }
+}
+
+/*768px < screen(big pad, PC)*/
+@media screen and (min-width: 768px) {
+    .col-lg-12 {
+        width: 100%;
+    }
+
+    .col-lg-11 {
+        width: 91.66666667%;
+    }
+
+    .col-lg-10 {
+        width: 83.33333333%;
+    }
+
+    .col-lg-9 {
+        width: 75%;
+    }
+
+    .col-lg-8 {
+        width: 66.66666667%;
+    }
+    .col-lg-7 {
+        width: 58.33333333%;
+    }
+    .col-lg-6 {
+        width: 50%;
+    }
+    .col-lg-5 {
+        width: 41.66666667%;
+    }
+    .col-lg-4 {
+        width: 33.33333333%;
+    }
+    .col-lg-3 {
+        width: 25%;
+    }
+    .col-lg-2 {
+        width: 16.66666667%;
+    }
+    .col-lg-1 {
+        width: 8.33333333%;
+    }
+}
+
+.baseline {
+    vertical-align: baseline;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+/*
+*
+*  ayout of carousel & contact
+*
+*/
+.card,
+.email,
+.works,
+.work-container {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.wo-item {
+    position: relative;
+    width: 320px;
+    height: 320px;
+}
+
+.carousel {
+    width: 100%;
+    background-color: #edeff5;
+}
+
+@media screen and (max-width: 767px) {
+    .carousel,
+    .item {
+        height: 1100px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .email {
+        padding-top: 2em;
+        padding-left: 2em;
+    }
+
+    .wo-item {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1049px) {
+    .carousel,
+    .item {
+        height: 800px;
+    }
+
+    .carousel-caption {
+        left: 15%;
+        right: 15%;
+    }
+
+    .card {
+        padding-top: 2em;
+        padding-right: 1em;
+    }
+
+    .contact {
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 1050px) {
+    .work-container,
+    .carousel-inner {
+        width: 1050px;
+    }
+
+    .carousel-caption {
+        left: 0;
+        right: 0;
+    }
+
+    .carousel,
+    .item {
+        height: 650px;
+    }
+
+    .contact {
+        width: 525px;
+    }
+
+    .card {
+        justify-content: flex-end;
+        padding: 2em 0 0 0;
+    }
+
+    .email {
+        justify-content: flex-start;
+    }
+
+    .email .contact {
+        width: calc(525px - 2em);
+    }
+
+    .works,
+    .work-container  {
+        padding: 0;
+    }
+}
+
+/*
+*
+*  ayout of whole parts
+*
+*/
+.part1 {
+    order: 1;
+}
+
+.part2 {
+    order: 2;
+}
+
+.part3 {
+    order: 3;
+}
+
+.part5 {
+    order: 4;
+}
+
+footer {
+    order: 5;
+}
+
+@media screen and (min-width: 768px) {
+    .part1 {
+        order: 1;
+    }
+
+    .part2 {
+        order: 2;
+    }
+
+    .part3 {
+        order: 4;
+    }
+
+    .part5 {
+        order: 3;
+    }
+}
+
+/*
+*
+*  offcanvas nav
+*
+*/
+nav {
+    z-index: 999999;
+    width: calc(100% - 3em);
+    position: fixed;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.home {
+    align-items: center;
+}
+
+.download {
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 767px) {
+    /*
+    *
+    *  menu icon
+    *
+    */
+    .menu-icon {
+        position: fixed;
+        right: 2em;
+        z-index: 99999;
+        padding: 19px 10px;
+    }
+
+    .menu-icon:hover {
+        cursor: pointer;
+    }
+
+    .menu-icon i
+    {
+        display: block;
+        position: relative;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+    }
+
+    .menu-icon i:before
+    {
+        position: absolute;
+        top: -8px;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        content: '';
+        -webkit-transition: transform 0.3s ease;
+        -moz-transition: transform 0.3s ease;
+        -ms-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        transition: transform 0.3s ease;
+    }
+
+    .menu-icon i:after
+    {
+        position: absolute;
+        top: 8px;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        content: '';
+        -webkit-transition: transform 0.3s ease;
+        -moz-transition: transform 0.3s ease;
+        -ms-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        transition: transform 0.3s ease;
+    }
+
+    nav {
+        color: #000;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        padding-top: 5em;
+        text-align: center;
+        background-color: #bbc8de;
+        -webkit-transform: translate(100vw, 0);
+        -moz-transform: translate(100vw, 0);
+        -ms-transform: translate(100vw, 0);
+        -o-transform: translate(100vw, 0);
+        transform: translate(100vw, 0);
+        -webkit-transition: transform 0.3s ease;
+        -moz-transition: transform 0.3s ease;
+        -ms-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        transition: transform 0.3s ease;
+    }
+
+    nav.open {
+        z-index: 9999;
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    nav ul li {
+        margin: 1em auto;
+    }
+
+    nav ul li:first-child:after {
+        content: '';
+        display: block;
+        width: 1.5em;
+        height: 3px;
+        background-color: #000;
+        margin: 1em auto;
+    }
+
+    nav ul li:last-child {
+        color: #000;
+    }
+
+    .home {
+        justify-content: center;
+    }
+
+    .home a {
+        width: 100%;
+        color: #000;
+    }
+    .download {
+        justify-content: center;
+    }
+}
+
+/*
+*
+*  offcanvas close button
+*
+*/
+
+.close i:before {
+    position: absolute;
+    top: -8px;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    content: '';
+    -webkit-transform: translate(0, 8px) rotate(-45deg);
+    -moz-transform: translate(0, 8px) rotate(-45deg);
+    -ms-transform: translate(0, 8px) rotate(-45deg);
+    -o-transform: translate(0, 8px) rotate(-45deg);
+    transform: translate(0, 8px) rotate(-45deg);
+}
+.close i {
+    height: 0;
+}
+.close i:after
+{
+    position: absolute;
+    top: 8px;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    content: '';
+    -webkit-transform: translate(0, -8px) rotate(45deg);
+    -moz-transform: translate(0, -8px) rotate(45deg);
+    -ms-transform: translate(0, -8px) rotate(45deg);
+    -o-transform: translate(0, -8px) rotate(45deg);
+    transform: translate(0, -8px) rotate(45deg);
+}
+
+/*
+*
+*  the content of front cover style
+*
+*/
+.front-cover {
+    width: 100%;
+    height: 100vh;
+    padding: 2em;
+    background: rgba(0, 0, 0, 0.2) url('../images/header-bg-phone-800_2x.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .front-cover {
+        background: transparent;
+    }
+
+    body:before {
+        content: '';
+        position: fixed;
+        z-index: -1;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.2) url('../images/header-bg-1600_2x.jpg') no-repeat center center;
+        background-size: cover;
+    }
+}
+
+.caption {
+    text-align: center;
+    margin-top: 5em;
+}
+
+.caption h1,
+.caption h3,
+.download-btn {
+    font-weight: 100;
+}
+
+.caption h3 {
+    color: #93a3bb;
+}
+
+/*
+*
+*  download buttons
+*
+*/
+.download-btn {
+    border: 1px solid #fff;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 0.5em;
+}
+@media screen and (max-width: 767px) {
+    .menu-download {
+        border: 1px solid #000;
+    }
+}
+/*
+*
+*  the circle photo logo in the header
+*
+*/
+.photo-logo {
+    text-align: center;
+}
+
+.photo-logo img {
+    border: 8px solid #fff;
+    margin: 2em auto;
+    width: 200px;
+    height: 200px;
+}
+
+/*
+*
+*  the red line under h2 caption
+*
+*/
+.item h2:after,
+.card h2:after,
+.email h2:after,
+.works h2:after,
+.work-container h2:after {
+    content: '';
+    display: block;
+    height: 0.3em;
+    width: 2em;
+    margin: 1em auto 1em 0;
+}
+
+.item h2:after,
+.card h2:after,
+.email h2:after {
+    background-color: #df3143;
+}
+
+.works h2:after,
+.work-container h2:after {
+    background-color: #fff;
+}
+
+/*
+*
+*  part2: slider
+*
+*/
+.carousel-control.left,
+.carousel-control.right {
+    background: transparent none;
+}
+
+.item .download-btn,
+footer .download-btn {
+    color: #000;
+    border-color: #000;
+}
+
+.slider-download {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.slider-download a,
+.ho-download a {
+    display: block;
+    width: 300px;
+}
+
+/*
+*
+*  slider 1: about me
+*
+*/
+.item h2,
+.item h3,
+.item p,
+.about-icons a,
+.footer-icons a,
+.ho-item li {
+    color: #000;
+    text-shadow: none;
+}
+
+.item h2,
+.item h3 {
+    text-align: left;
+}
+
+.item p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+.item h2,
+.card h2,
+.email h2,
+.works h2,
+.work-container h2 {
+    text-transform: uppercase;
+}
+
+.carousel-caption {
+    top: 6em;
+    bottom: auto;
+}
+
+.about-icons {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.footer-icons li {
+    margin-right: 0.3em;
+    font-size: 40px;
+}
+
+.footer-icons li:last-child {
+    margin-right: 0;
+}
+
+.about-icons li {
+    margin: 0.3em;
+    font-size: 40px;
+}
+
+.carousel-indicators li {
+    background-color: #2e4975;
+    border: 2px solid #2e4975;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.carousel-indicators .active {
+    background-color: #edeff5;
+    width: 13px;
+    height: 13px;
+}
+
+/*
+*
+*  the order of: caption & content & icons
+*
+*/
+.about-caption {
+    order: 1;
+}
+
+.about-content {
+    order: 2;
+}
+
+.about-icons {
+    order: 3;
+}
+
+@media screen and (min-width: 768px) {
+    .about-caption {
+        order: 1;
+    }
+
+    .about-content {
+        order: 3;
+        margin-top: 4em;
+    }
+
+    .about-icons {
+        order: 2;
+        margin: 0;
+    }
+
+    .about-content .col-lg-6:first-child {
+        padding-right: 2em;
+    }
+
+    .about-content .col-lg-6:last-child {
+        padding-left: 2em;
+    }
+}
+
+/*
+*
+*  slider 2: experience
+*
+*/
+.slider-download {
+    display: none;
+}
+
+h3 time {
+    color: #94a3ba;
+}
+
+@media screen and (min-width: 768px) {
+    .slider-download {
+        display: block;
+    }
+
+    .ex-item:nth-of-type(1) {
+        padding-right: 2em;
+    }
+
+    .ex-item:nth-of-type(2) {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    .ex-item:nth-of-type(3) {
+        padding-left: 2em;
+    }
+}
+
+/*
+*
+*  slider 4: hobbits & interests
+*
+*/
+.ho-item li {
+    padding: 1em;
+}
+
+.ho-item .icon {
+    background-color: #bac7dc;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    padding: 1.5em;
+    max-width: 110px;
+    margin: 0 auto;
+}
+
+.ho-item .icon img {
+    width: 100%;
+}
+
+.ho-item p {
+    text-transform: capitalize;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
+.ho-download {
+    margin: 0 auto;
+}
+
+.hobbits .download-btn,
+footer .download-btn {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/*
+*
+*  the order of hobbits & interests
+*
+*/
+.ho-caption{
+    order: 1;
+}
+
+.ho-item {
+    order: 2;
+}
+
+.ho-download {
+    order: 3;
+}
+
+@media screen and (min-width: 768px) {
+    .ho-caption{
+        order: 1;
+    }
+
+    .ho-item {
+        order: 3;
+        margin-top: 4em;
+    }
+
+    .ho-download {
+        order: 2;
+    }
+
+    .hobbits .download-btn {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+/*
+*
+*  part3 & part4: quick card & contact me
+*
+*/
+.card {
+    background-color: #2e4975;
+    color: #fff;
+}
+
+.info {
+    margin-bottom: 2em;
+}
+
+.info textarea {
+    resize: none;
+}
+
+.info input,
+.info textarea {
+    background-color: transparent;
+    border: none;
+    line-height: 3em;
+    border-bottom: 1px solid #2e4975;
+    padding-left: 0.5em;
+    margin-bottom: 1em;
+}
+
+.info input:focus,
+.info textarea:focus {
+    border-bottom: 2px solid #2e4975;
+}
+
+.info input::-webkit-input-placeholder,
+.info textarea::-webkit-input-placeholder {
+    color: #2e4975;
+}
+
+.info input::-moz-placeholder,
+.info textarea::-moz-placeholder {
+    color: #2e4975;
+}
+
+.info input:-ms-input-placeholder,
+.info textarea:-ms-input-placeholder {
+    color: #2e4975;
+}
+
+.co-email {
+    width: calc((100% - 2em)/2);
+}
+
+.co-email {
+    margin-left: 1em;
+}
+
+.send-btn {
+    border: none;
+    background-color: transparent;
+    color: #2e4975;
+    text-transform: capitalize;
+}
+
+.send-btn:hover {
+    color: inherit;
+}
+
+.email {
+    background-color: #bac7dc;
+}
+
+/*
+*
+*  part5: works
+*
+*/
+.wo-item {
+    flex-direction: column;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.wo-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background: transparent;
+}
+
+.wo-item:hover::before {
+    background: rgba(0,0,0,0.2);
+}
+
+.wo-item h3,
+.wo-item p {
+    margin: 0;
+    text-align: center;
+}
+
+.wo-item p {
+    color: #000;
+}
+
+.wo-item h3 {
+    font-size: 30px;
+}
+
+.wo-item:nth-of-type(odd) {
+    background-color: #fff;
+}
+
+.wo-item:nth-of-type(odd) h3 {
+    color: #df3143;
+}
+
+.wo-item:nth-of-type(2n) {
+    background-color: #bac7dc;
+}
+
+.wo-item:nth-of-type(2n) h3 {
+    color: #2e4975;
+}
+
+.part5 img {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.work-container {
+    margin-bottom: 4em;
+    color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+    .work-container {
+        background: rgba(0, 0, 0, 0.2) url('../../img_src/works-bg-phone.jpg') no-repeat center center;
+        background-size: cover;
+        color: #fff;
+    }
+    .wo-item:last-of-type {
+        margin-bottom: 5em;
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: #edeff5;
+}
+
+.fo-1 {
+    order: 1;
+}
+
+.fo-2 {
+    order: 2;
+}
+
+.fo-3 {
+    order: 3;
+}
+
+.fo-4 {
+    order: 4;
+}
+
+@media screen and (min-width: 768px) {
+    .fo-1 {
+        order: 1;
+        margin-top: 4em;
+        align-items: center;
+    }
+
+    .fo-2 {
+        order: 4;
+        margin-bottom: 4em;
+    }
+
+    .fo-3 {
+        order: 2;
+        margin-top: 4em;
+        align-items: center;
+    }
+
+    .fo-4 {
+        order: 3;
+        margin-bottom: 4em;
+    }
+
+    .fo-1 .download-btn {
+        margin: 0;
+    }
+}
+
+.download-btn:hover {
+    background-color: #fff;
+    color: #df3143;
+}

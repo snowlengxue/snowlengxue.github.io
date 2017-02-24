@@ -1,281 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>test-slidedown</title>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume of Vicky Leng</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+<body class="flex-center">
+    <!--part1: front cover-->
+    <header class="part1 front-cover">
+        <span id="menu" class="menu-icon"><i></i></span>
+        <nav id="drawer">
+            <ul class="flex-container">
+                <li class="col-sm-12 col-md-12 col-lg-6 flex-container home"><a href="#">home</a></li>
+                <li class="col-sm-12 col-md-12 col-lg-6 flex-container download">
+                    <a class="download-btn menu-download" href="resume/resumeofVickyLeng.jpg" download="Resume of Vicky Leng.jpg">download my full resume</a>
+                </li>
+            </ul>
+        </nav>
+        <!--caption text-->
+        <article class="caption">
+            <h1>Vicky Leng</h1>
+            <h3>Front-end Developer</h3>
+            <a class="download-btn" href="resume/resumeofVickyLeng.jpg" download="Resume of Vicky Leng.jpg">download my full resume</a>
+        </article>
+        <!--photo logo-->
+        <figure class="photo-logo">
+            <picture>
+                <!--768px < screen(big pad, PC)-->
+                <source media="(min-width: 768px)" srcset="images/vicky-1600_2x.jpg 2x, images/vicky-1600_1x.jpg">
+                <!--360px < screen < 768px(small pad, phone)-->
+                <source media="(min-width: 360px)" srcset="images/vicky-1600_2x.jpg 2x, images/vicky-1600_1x.jpg">
+                <!--screen < 360px(smaller than phone)-->
+                <img class="img-circle" src="../images/vicky-1600_1x.jpg" alt="vicky's photo">
+            </picture>
+        </figure>
+    </header>
 
-<style>
-    body {
-        margin:0;
-        padding:0;
-        margin-right: -10px;
-    }
+    <!--part2: sliders & resume-->
+    <section class="part2 carousel slide flex-container flex-center" id="carousel-example-generic"> <!--data-ride="carousel" data-interval="4000"-->
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active indicator"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1" class="indicator"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2" class="indicator"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3" class="indicator"></li>
+        </ol>
 
-    /* @3 sizes of pic
-*********************************************************************************/
-
-    .pic {
-        margin-bottom:20px;
-        margin-top: 20px;
-        overflow: hidden;
-        border: 2px solid;
-        position: relative;
-    }
-    .pic-l {
-        width: 500px;
-        height: 300px;
-    }
-    .pic-m {
-        width: 388px;
-        height: 232px;
-    }
-    .pic-s {
-        width: 300px;
-        height: 188px;
-    }
-
-    .pic-img {
-        height: 70%;
-    }
-
-    .pic-cap {
-        width: 100%;
-        height: 66px;
-        background-color: #fff;
-        text-align: center;
-    }
-
-
-    @media only screen and (max-width: 992px) {
-        .pic-l {
-            width: 388px;
-            height: 232px;
-        }
-        .pic-m {
-            width: 300px;
-            height: 188px;
-        }
-        .pic-s {
-            width: 230px;
-            height: 145px;
-        }
-    }
-
-
-    /* @mban
-    **********************************************************************/
-    #mban {
-        width: 100%;
-        height: 300px;
-        border: 2px solid;
-        margin:0 auto;
-        display: none;
-        position: absolute;/*阻止close按钮跑出去*/
-        background: #fff;
-        z-index: 999999;
-    }
-
-    .mban-cap {
-        width: 40%;
-        margin: 30px;
-        float: left;
-        border: 2px solid red;
-        text-align: center;
-    }
-
-    .mban-cap img {
-        width:300px;
-    }
-
-    .mban-des {
-        width: 50%;
-        border: 2px solid blue;
-        margin: 10px;
-        margin-left: 45%;
-        margin-top: 100px;
-        padding: 50px;
-    }
-
-    #mbanClose {
-        width:50px;
-        position: absolute;/*相对于父元素description定位*/
-        top: 10px;
-        right:30px;
-    }
-
-    /* @ hide the content of each picture
-   *************************************************************************************/
-
-    #descriptionContent {
-        display: none;
-    }
-
-    /* @left & right
-    *************************************************************************************/
-
-    .demo-left,
-    .demo-right {
-        width: 49%;
-        display: inline-block;
-        border: 1px solid;
-        margin: -2px;
-        vertical-align: top;
-    }
-    .demo-left {
-        margin-right: .5%;
-        margin-top: 20px;
-    }
-
-    .demo-right {
-        margin-left: .5%;
-    }
-
-    .demo-left .pic {
-        margin-right: 0;
-        margin-left: auto;
-    }
-
-    .demo-right .pic {
-        margin-left: 0;
-        margin-right: auto;
-    }
-    .pic-wrapper {
-        padding: 0;
-        width: 100%;
-        margin: 0 auto;
-        height: auto;
-        border: 1px solid red;
-    }
-
-
-
-</style>
-
-
-<body>
-test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>
-
-
-<div   id="mban">
-    <div class="mban-cap">
-        <p id="mbanCap">this place is the caption of the picture</p>
-        <img id="mbanImg" src="" alt="">
-    </div>
-    <div id="mbanDes" class="mban-des">this place is the description of the picture</div>
-    <button id="mbanClose">close</button>
-</div>
-<!--the content of every pictures begins-->
-<div id="descriptionContent">
-    <div id="contentLeft">
-        <div id="contentPicL1" class="hided">
-            <div id="contentCapL1">this is the first picture in the LEFT side</div>
-            <img id="contentImgL1" src="imgs/1.png" alt="">
-            <div id="contentDesL1">this part is the description of the first picture in the LEFT side</div>
-        </div>
-        <div id="contentPicL2" class="hided">
-            <div id="contentCapL2">this is the second picture in the LEFT side</div>
-            <img id="contentImgL2" src="imgs/1.png" alt="">
-            <div id="contentDesL2">this part is the description of the second picture in the LEFT side</div>
-        </div>
-    </div>
-    <div id="contentRight">
-        <div id="contentPicR1" class="hided">
-            <div id="contentCapR1">this is the first picture in the RIGHT side</div>
-            <img id="contentImgR1" src="imgs/1.png" alt="">
-            <div id="contentDesR1">this part is the description of the second picture in the RIGHT side</div>
-        </div>
-        <div id="contentPicR2" class="hided">
-            <div id="contentCapR2">this is the first picture in the RIGHT side</div>
-            <img id="contentImgR2" src="imgs/1.png" alt="">
-            <div id="contentDesR2">this part is the description of the second picture in the RIGHT side</div>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="pic-wrapper">
-    <!--the pictures in left begins-->
-    <div class="demo-left">
-        <div class="picContainer">
-            <div id="picL5" class="pic pic-l" >
-                <img class="pic-img" src="imgs/2.png" alt="">
-                <div class="pic-cap">
-                    <p>this is the picture L5</p>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner flex-container" role="listbox">
+            <!--about me-->
+            <div class="item flex-container full-width active">
+                <div class="carousel-caption">
+                    <!--caption-->
+                    <div class="about-caption col-sm-12 col-md-12 col-lg-6">
+                        <h2>about me</h2>
+                    </div>
+                    <!--content-->
+                    <div class="about-content flex-container full-width">
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <p>
+                                Hi, my name is Leng Xue, you can call me Vicky.
+                                I come from Heilongjiang province.
+                                I major in Materials Sience and Technology.
+                                After graduated from Shanghai Univercity,
+                                I started my work career in Shanghai.
+                            </p>
+                            <p>
+                                My first job started in the third year of college，it is a
+                                Human resources company. I worked there about 2 years as a HR Assistant, one year part-time, one year full-time.
+                                Then I came to my second company, it is a trade company.
+                                I worked there about 1 year as the assistant to the CEO.
+                            </p>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <p>
+                                During this time, I'm always looking for cpportunity to do something
+                                meaningful. I don't like do the job like before, instead I'm interested in technology.
+                                Now I'm doing some simple work related with the Web development in the current company.
+                                Although having no experience, I belive that I can be a good coder.
+                            </p>
+                        </div>
+                    </div>
+                    <!--icons-->
+                    <ul class="about-icons flex-center flex-container col-sm-12 col-md-12 col-lg-6">
+                        <li><a class="entypo-twitter-circled" href="#"></a></li>
+                        <li><a class="entypo-facebook-circled" href="#"></a></li>
+                        <li><a class="entypo-gplus-circled" href="#"></a></li>
+                        <li><a class="entypo-linkedin-circled" href="#"></a></li>
+                    </ul>
                 </div>
             </div>
-            <div id="picL4" class="pic pic-s" >
-                <img class="pic-img" src="imgs/2.png" alt="">
-                <div class="pic-cap">
-                    <p>this is the picture L4</p>
+
+            <!--experience-->
+            <div class="item flex-container full-width">
+                <div class="carousel-caption">
+                    <!--caption-->
+                    <div class="baseline flex-container col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="col-lg-6">experience</h2>
+                        <div class="slider-download col-lg-6">
+                            <a class="download-btn center-block" href="resume/resumeofVickyLeng.jpg" download="Resume of Vicky Leng.jpg">download my full resume</a>
+                        </div>
+                    </div>
+                    <!--content-->
+                    <div class="flex-container full-width">
+                        <div class="ex-item col-xm-12 col-md-12 col-lg-4">
+                            <h3>Shanghai ClearTV Corp.<br>（Stock Code:834762）<br><time datetime="2014-01-01">2015 - Current</time></h3>
+                            <p>
+                                2015-2016.6 Worked as assistant of Research and development Department.<br>
+                                2016.6-current Do some work related to front-end develop.
+                            </p>
+                        </div>
+                        <div class="ex-item col-xm-12 col-md-12 col-lg-4">
+                            <h3>Westingarea Mechanical and<br>Electrical Systems co., LTD<br><time datetime="2013-01-01">2013 - 2015</time></h3>
+                            <p>
+                                Worked as assistant to the CEO.
+                                Provides comprehensive support services to the CEO that ensures a professional, responsive
+                                and effective experience with the organization as a whole.
+                            </p>
+                        </div>
+                        <div class="ex-item col-xm-12 col-md-12 col-lg-4">
+                            <h3>RuiXi Enterprise Management<br>Consulting co., LTD<br><time datetime="2012-01-01">2012 - 2013</time></h3>
+                            <p>
+                                Worked as HR researching.
+                                Coordinating interviews with the hiring managers.
+                                Following up on the interview process status.
+                                Maintaining relationships with both internal and external clients to ensure staffing goals are achieved.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="picL3" class="pic pic-m" >
-                <img class="pic-img" src="imgs/2.png" alt="">
-                <div class="pic-cap">
-                    <p>this is the picture L3</p>
+
+            <!--education-->
+            <div class="item flex-container full-width">
+                <div class="carousel-caption">
+                    <!--caption-->
+                    <div class="baseline flex-container col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="col-lg-6">education</h2>
+                        <div class="slider-download col-lg-6">
+                            <a class="download-btn center-block" href="resume/resumeofVickyLeng.jpg" download="Resume of Vicky Leng.jpg">download my full resume</a>
+                        </div>
+                    </div>
+                    <!--content-->
+                    <div class="flex-container full-width">
+                        <div class="ex-item col-xm-12 col-md-12 col-lg-6">
+                            <h3>Udacity Front-end Web Development<br>Nanodegree<br><time datetime="2007-01-01">2016 - current</time></h3>
+                            <p>
+                                Started learning the Front-end Web Development Nanodegree.
+                                Have made some web pages with the technology of HTML, CSS.
+                                Know about the Bootstrap framework, Matirlize framework.
+                                Know about the jQuery.
+                                Planning to finish the Nanodegree within 1 year or less.
+                            </p>
+                        </div>
+                        <div class="ex-item col-xm-12 col-md-12 col-lg-6">
+                            <h3>Shanghai University<br><time datetime="2010-01-01">2008 - 2012</time></h3>
+                            <p>
+                                Major in Materials Sience and Technology， bachelor's degree.<br>
+                                Know about the C language.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="picL2" class="pic pic-m" >
-                <img class="pic-img" src="imgs/2.png" alt="">
-                <div class="pic-cap">
-                    <p>this is the picture L2</p>
-                </div>
-            </div>
-            <div id="picL1" class="pic pic-s" >
-                <img class="pic-img" src="imgs/1.png" alt="">
-                <div class="pic-cap">
-                    <p>this is the picture L1</p>
+
+            <!--hobbits & interests-->
+            <div class="item flex-container full-width hobbits">
+                <div class="carousel-caption">
+                    <!--caption-->
+                    <div class="ho-caption col-sm-6 col-md-6 col-lg-6">
+                        <h2>hobbits & interests</h2>
+                    </div>
+                    <!--content-->
+                    <ul class="ho-item flex-container full-width">
+                        <li class="col-sm-6 col-md-6 col-lg-2">
+                            <div class="icon">
+                                <img class="img-responsive" src="images/basketball.svg" alt="I like basketball">
+                            </div>
+                            <p>basketball</p>
+                        </li>
+                        <li class="col-sm-6 col-md-6 col-lg-2">
+                            <div class="icon">
+                                <img class="img-responsive" src="images/bicycle.svg" alt="I like bicycle">
+                            </div>
+                            <p>bicycle</p>
+                        </li>
+                        <li class="col-sm-6 col-md-6 col-lg-2">
+                            <div class="icon">
+                                <img class="img-responsive" src="images/popcorn-box.svg" alt="I like movie">
+                            </div>
+                            <p>movie</p>
+                        </li>
+                        <li class="col-sm-6 col-md-6 col-lg-2">
+                            <div class="icon">
+                                <img class="img-responsive" src="images/read.svg" alt="I like read">
+                            </div>
+                            <p>read</p>
+                        </li>
+                        <li class="col-sm-6 col-md-6 col-lg-2">
+                            <div class="icon">
+                                <img class="img-responsive" src="images/shopping-cart.svg" alt="I like shopping">                                    </div>
+                            <p>shopping</p>
+                        </li>
+                        <li class="col-sm-6 col-md-6 col-lg-2">
+                            <div class="icon">
+                                <img class="img-responsive" src="images/traveler-with-a-suitcase.svg" alt="I like traveling">
+                            </div>
+                            <p>traveling</p>
+                        </li>
+                    </ul>
+                    <!--download button-->
+                    <div class="ho-download baseline">
+                        <a class="download-btn center-block" href="resume/resumeofVickyLeng.jpg" download="Resume of Vicky Leng.jpg">download my full resume</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--the pictures in the right begins-->
-    <div class="demo-right">
-        <div class="picContainer">
-            <div id="picR5" class="pic pic-l" >
-                <img class="pic-img" src="imgs/slider5.jpg" alt="">
-                <div class="pic-cap">
-                    <p>this is the picture R5</p>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"></a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"></a>
+    </section>
+
+    <!--part3 & part4: quick card & contact me-->
+    <section class="part3 flex-container full-width">
+        <!--part3: quick card-->
+        <section class="card flex-container col-sm-12 col-md-12 col-lg-6">
+            <article class="contact">
+                <h2 class="full-width">quick id</h2>
+                <div class="info flex-container">
+                    <div class="option col-sm-4 col-md-4 col-lg-4">
+                        <p>phone</p>
+                        <p>email</p>
+                        <p>wechat</p>
+                        <p>address</p>
+                    </div>
+                    <div class="detail col-sm-8 col-md-8 col-lg-8">
+                        <p>+86 1760****765</p>
+                        <p>vicky_***xue@***.com</p>
+                        <p>vicky_****xue</p>
+                        <p>Pudong district of Shanghai</p>
+                    </div>
                 </div>
+            </article>
+        </section>
+        <!--part4: contact me-->
+        <section class="email col-sm-12 col-md-12 col-lg-6">
+            <div class="contact">
+                <h2>contact me</h2>
+                <form class="info contact-form" action="mailto:vicky_lengxue@sina.com" method="get">
+                    <div class="form-group">
+                        <input name="subject" class="col-sm-12 col-md-12 col-lg-12 form-control" type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="body" class="col-sm-12 col-md-12 col-lg-12 form-control" rows="3" placeholder="Message"></textarea>
+                    </div>
+                    <div class="contact-submit">
+                        <button type="submit" class="send-btn center-block">send</button>
+                    </div>
+                </form>
             </div>
-            <div id="picR4" class="pic pic-m" >
-                <img class="pic-img" src="imgs/slider5.jpg" alt="">
-                <div class="pic-cap">
-                    <p>this is the picture R4</p>
-                </div>
+        </section>
+    </section>
+
+    <!--part5: my works-->
+    <section class="part5 full-width work-container">
+            <h2 class="col-sm-12 col-md-12 col-lg-12">my works</h2>
+            <div class="flex-container flex-center">
+                <a href="#" class="wo-item flex-container flex-center">
+                    <p>The company's official website</p>
+                    <h3>CLEAR TV<br>（version 1）</h3>
+                </a>
+                <a href="#" class="wo-item flex-container flex-center">
+                    <p>The company's official website</p>
+                    <h3>CLEAR TV<br>（version 2）</h3>
+                </a>
+                <a href="#" class="wo-item flex-container flex-center">
+                    <p>to be continue</p>
+                    <h3>to be continue</h3>
+                </a>
+                <a href="#" class="wo-item flex-container flex-center">
+                    <p>to be continue</p>
+                    <h3>to be continue</h3>
+                </a>
+                <a href="#" class="wo-item flex-container flex-center">
+                    <p>to be continue</p>
+                    <h3>to be continue</h3>
+                </a>
+                <a href="#" class="wo-item flex-container flex-center">
+                    <p>to be continue</p>
+                    <h3>to be continue</h3>
+                </a>
             </div>
-            <div id="picR3" class="pic pic-l" >
-                <img class="pic-img" src="imgs/slider5.jpg" alt="">
-                <div class="pic-cap">
-                    <p>this is the picture R3</p>
-                </div>
-            </div>
-            <div id="picR2" class="pic pic-s" >
-                <img class="pic-img" src="imgs/slider5.jpg" alt="">
-                <div class="pic-cap">
-                    <p>this is the picture R2</p>
-                </div>
-            </div>
-            <div id="picR1" class="pic pic-l" >
-                <img class="pic-img" src="imgs/3.png" alt="">
-                <div class="pic-cap">
-                    <p>this is the picture R1</p>
-                </div>
-            </div>
+    </section>
+
+    <footer class="full-width flex-center">
+        <div class="fo-1 flex-container flex-center col-sm-8 col-md-8 col-lg-6">
+            <a class="download-btn" href="resume/resumeofVickyLeng.jpg" download="Resume of Vicky Leng.jpg">download my full resume</a>
         </div>
-    </div>
-
-</div>
-
-
-test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>
-
+        <p class="fo-2 col-sm-8 col-md-8 col-lg-6">follow me on social networks</p>
+        <ul class="fo-3 footer-icons flex-center flex-container col-sm-8 col-md-8 col-lg-6">
+            <li><a class="entypo-twitter-circled" href="#"></a></li>
+            <li><a class="entypo-facebook-circled" href="#"></a></li>
+            <li><a class="entypo-gplus-circled" href="#"></a></li>
+            <li><a class="entypo-linkedin-circled" href="#"></a></li>
+        </ul>
+        <p class="fo-4 p2 col-sm-8 col-md-8 col-lg-6">© this page refers to the template in Wix.com</p>
+    </footer>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/main.js"></script>
 </body>
-
-<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
-<script type="text/javascript" src="js/test7-2.js"></script>
-
-
 </html>
